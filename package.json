@@ -1,0 +1,25 @@
+{
+  "name": "isacalculator",
+  "version": "0.0.1",
+  "description": "Standard calculator for operations with real numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiaz633/ISACalculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adiaz633/ISACalculator/issues"
+  },
+  "homepage": "https://github.com/adiaz633/ISACalculator#readme",
+  "devDependencies": {
+    "webpack": "^5.85.1",
+    "webpack-cli": "^5.1.3"
+  }
+}
