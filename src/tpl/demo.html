@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>ISA Calculator</title>
+  </head>
+  <body>
+    <style>
+      .root {
+        display:none;
+      }
+      .root.active {
+        display:block;
+      }
+    </style>
+    <div id="root" class="root">
+      <div class="formbold-main-wrapper">
+        <div class="w-full">
+          <div class="formbold-form-wrapper">
+            <div class="formbold-form-header">
+              <h3>ISACalculator Demo</h3>
+            </div>
+            <div class="formbold-chatbox-form">
+              <div class="formbold-mb-5">
+                <label for="name" class="formbold-form-label">Arguments of operations (separated by commas)</label>
+                <input
+                  type="text"
+                  name="arguments"
+                  id="arguments"
+                  placeholder="Arguments of operations (separated by commas)"
+                  class="formbold-form-input" />
+              </div>
+
+              <div class="formbold-mb-5">
+                <label for="email" class="formbold-form-label">Operation (choose between +, -, *, /, sqrt)</label>
+                <input
+                  type="text"
+                  name="operation"
+                  id="operation"
+                  placeholder="+, -, *, /, sqrt"
+                  class="formbold-form-input-small" />
+              </div>
+
+              <div class="formbold-mb-5">
+                <label for="message" class="formbold-form-label"> Result </label>
+                <textarea
+                  rows="6"
+                  name="message"
+                  id="message"
+                  placeholder="Result of the operation"
+                  class="formbold-form-input"></textarea>
+              </div>
+              <div>
+                <button class="formbold-btn w-full" class="calculate" id="calculate">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
