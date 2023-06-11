@@ -3,7 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: "production",
+  mode: "development",
+  devtool:"eval-source-map",
+  devServer: {
+    compress: true,
+    host: "localhost",
+    port: 3000,
+    allowedHosts: "all",
+    client: {
+      overlay: true,
+    },
+  },
   module: {
     rules: [
       {
