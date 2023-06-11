@@ -15,6 +15,7 @@ describe("Calculator arithmetical root square", () => {
     calculatorFactory = new ISACalculatorFactory();
   });
 
+
   test("Use 1 positive integer number and return the result", () => {
     const result = calculatorFactory.makeOperation("sqrt", 121)
     expect(result).toBeCloseTo(11, ACCURACY);
@@ -22,12 +23,12 @@ describe("Calculator arithmetical root square", () => {
 
   test("Use 2 positive integer numbers and return the result using just the first number", () => {
     const result = calculatorFactory.makeOperation("sqrt", 3650, 20)
-    expect(result).toBeCloseTo(59.6, ACCURACY);
+    expect(result).toBeCloseTo(60.4152, ACCURACY);
   });
 
   test("Use 1 positive real number and return the result", () => {
     const result = calculatorFactory.makeOperation("sqrt", 225.45)
-    expect(result).toBeCloseTo(15.01, ACCURACY);
+    expect(result).toBeCloseTo(15.0149, ACCURACY);
   });
 
   test("Use 1 negative real number and return NaN as result", () => {
@@ -39,5 +40,4 @@ describe("Calculator arithmetical root square", () => {
     const result = calculatorFactory.makeOperation("sqrt", "49")
     expect(result).toEqual(NaN);
   });
-
 });

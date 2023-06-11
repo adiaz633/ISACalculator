@@ -5,7 +5,7 @@ import { ISACalculator } from "./ISACalculator.js";
 /* #region CONSTANTS AND PRIVATE METHODS */
 
   /** @type {Number} */
-  const ACCURACY = 0.001;
+  const ACCURACY = 0.000001;
 
   /**
    * Absolute function for a Number
@@ -31,12 +31,15 @@ export class ISACalculatorSquare extends ISACalculator {
    */
   resolveOperation() {
     const [numberParam] = this.numbers;
-    let x = numberParam;
+    let x = numberParam > 0 ? numberParam : NaN;
     let y = 1;
 
-    while (abs(x-y)/abs(x) > ACCURACY) {
-      x = (x+y)/2;
-      y = numberParam / x;
+    if (!isNaN(x)) {
+      while (abs(x-y)/abs(x) > ACCURACY) {
+        x = (x+y)/2;
+        y = numberParam / x;
+      }
+
     }
 
     return x;
