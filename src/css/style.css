@@ -157,6 +157,14 @@ body {
   justify-content: center;
 }
 
+.input-error {
+  border: 1px solid red;
+}
+
+.input-valid {
+  border: 1px solid rgb(0, 255, 55);
+}
+
 .formbold-action-btn .formbold-cross-icon {
   display: none;
 }
